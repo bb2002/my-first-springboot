@@ -1,5 +1,6 @@
 package tacos;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.validation.constraints.NotNull;
@@ -9,6 +10,9 @@ import lombok.Data;
 
 @Data
 public class Taco {
+	private Long id;
+	private Date createdAt;
+	
 	@NotNull()
 	@Size(min=5, message="이름은 최소한 5글자 이상으로 해주세요.")
 	private String name;
